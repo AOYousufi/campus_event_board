@@ -1,0 +1,54 @@
+# Node / JavaScript
+node_modules/
+**/node_modules/
+
+# Package manager stores / debug
+.pnpm-store/
+.pnpm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+lerna-debug.log*
+
+# Build output (React, Vite, CRA, Next, etc.)
+dist/
+build/
+.next/
+out/
+
+# Caches
+.cache/
+.parcel-cache/
+.turbo/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+coverage-final.json
+.nyc_output/
+
+# Environment files
+.env
+.env.*.local
+
+# Logs
+*.log
+
+# IDE / editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tgz
