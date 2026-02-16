@@ -1,0 +1,97 @@
+body{
+    background-color: rgb(247, 247, 247);
+}
+
+h1{
+    font-size: 650%;
+    text-align: center;
+    font-family:"Barriecito", system-ui;
+    font-weight: 90;
+    margin:3%;
+    margin-bottom:1.5%;
+}
+
+h2{
+    font-size: 400%;
+    text-align: center;
+    font-weight: 90;
+    margin:2%;
+    margin-bottom:-1%
+}
+
+h3{
+    font-size: 300%;
+    text-align: left;
+    font-weight: 90;
+    margin:3%;
+    margin-left:4%;
+    margin-bottom:-1%;
+}
+
+h4{
+    font-size: 200%;
+    text-align:left;
+    font-weight: 90;
+    color: rgb(255, 251, 245);
+    margin-top: 9%;
+    margin-bottom:5%
+}
+
+p{
+    font-size:130%;
+    text-align:left;
+    font-weight:50;
+    margin:2%;
+    margin-left:0%;
+    color:rgb(255, 251, 245)
+}
+
+a:link{
+    color:rgb(255, 251, 245);
+    font-size: 150%;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#640b42;
+    font-size:150%;
+    text-decoration: none;
+}
+
+a:visited{
+    color:rgb(255, 251, 245);
+    font-size: 150%;
+    text-decoration: none;
+}
+
+.links_bar{
+    display: flex;
+    gap: 18px;
+    padding: 14px;
+    padding-left: 20%;
+    padding-right:20%;
+    border-bottom: 2px solid #46464617;
+    border-right: 2px solid #46464617;
+    border-left: 2px solid #46464617;
+    border-radius: 6px;
+    background: rgb(3, 10, 68);
+    align-items: center;
+    text-align: center;
+}
+
+.event_panel{
+    display:flex;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 26px;
+    background: rgb(3, 10, 68)
+}
+
+.grid{
+    display:grid;
+    gap:60px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left:180px;
+    margin-right:180px;
+    margin-top: 70px;
+}
