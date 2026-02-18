@@ -95,3 +95,14 @@ a:visited{
     margin-right:180px;
     margin-top: 70px;
 }
+
+.button{
+    display: inline-flex;
+    padding: 3px;
+    padding-right:8px;
+    padding-left:8px;
+    margin-top: 10px;
+    border-radius:12px;
+    background:rgb(59, 121, 255);
+    float:right;
+}
