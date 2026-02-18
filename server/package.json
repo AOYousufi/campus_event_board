@@ -1,8 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "setup-dbs": "psql -f ./src/db/setup.sql",
+    "seed": "node ./src/db/seed/run-seed.js",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js"
   },
@@ -14,7 +17,10 @@
     "nodemon": "^3.1.11"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "express": "^5.2.1",
-    "pg": "^8.18.0"
+    "pg": "^8.18.0",
+    "pg-format": "^1.0.4",
+    "require": "^2.4.20"
   }
 }
