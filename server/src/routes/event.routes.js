@@ -1,11 +1,9 @@
 import {Router} from "express"
-
+import getAllEvents from "../controllers/getAllEvents";
 
 const router = Router()
 
 
-router.get("/test" , (req, res )=>{
-    res.json ({response : true})
-})
+router.get("/" , getAllEvents)
 
 export default router;
