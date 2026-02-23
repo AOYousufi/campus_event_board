@@ -97,7 +97,6 @@ li{
 .links_bar{
     display: flex;
     gap: 18px;
-    padding: 14px;
     padding-left: 20%;
     padding-right:20%;
     border-bottom: 2px solid #46464617;
@@ -111,6 +110,7 @@ li{
 
 .event_panel{
     display:flex;
+    font-family: monospace;
     gap: 20px;
     padding: 30px;
     border-radius: 26px;
@@ -138,6 +138,11 @@ li{
     border-radius:12px;
     background:#fca311;
     float:right;
+}
+
+.active{
+    background-color: #fca311;
+    color:#14213d;
 }
 
 #search{
