@@ -8,29 +8,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&family=Modak&family=Protest+Guerrilla&family=Sigmar&display=swap" rel="stylesheet">
  
     <link rel="stylesheet" href = "style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Campus Events</h1>
-        <!--links bar-->
-        <section class = "links_bar">
-            <div style = "margin-bottom: -0.15%;display: flex;">
-                <ul>
-                    <li><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
-                    <li class = "active"><a href="society_events_page.html" alt="Society Events">Society Events</a></li>
-                    <li><a href = "test.html">SU Events</a></li>
-                    <li><a href="test.html">University Events</a></li>
-                </ul>
-            </div>
-        </section>
+    <!--title-->
+    <div style = "text-align: center; align-items: center;margin:2.5%; margin-bottom: 1.5%;">
+    <a class = "title" href="landing_page.html" alt = "Campus Events">Campus Events</a>
+    </div>
+
+    <!--links bar-->
+    <section class = "links_bar">
+        <div style = "margin-bottom: -0.05%;display: flex;">
+            <ul>
+                <li><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
+                <li class = "active"><a href="society_events_page.html" alt="Society Events">Society Events</a></li>
+                <li><a href = "test.html">SU Events</a></li>
+                <li><a href="test.html">University Events</a></li>
+            </ul>
+        </div>
+    </section>
 
     <h3 style = "font-size: 350%;margin-top:2%;margin-left:5%">Society Events</h3>
 
-    <!--search bar-->
-    <div style = "float:inline-end;margin-right:4%; margin-top:-2%;">
-        <form>
-            <label for="search">Search Events: </label>
-            <input type="text" id="search" name="search">
-            <input type="button" id="search_button" name= "search_button" value="Search">
-        </form>
+    <div style = "float:inline-end;margin-right:4%; margin-top:-2.5%;">
+        <!--Filters-->
+        <button onclick="displayFilters()" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
+        <div id="filters" class = "filters_list">
+            <a href="#">Filter 1</a>
+            <a href="#">Filter 2</a>
+            <a href="#">Filter 3</a>
+        </div>
+
+        <!--search bar-->
+        <div style = "float:inline-end;margin-top:0.8%">
+            <form>
+                <label for="search">Search Events: </label>
+                <input type="text" id="search" name="search">
+                <input type="button" id="search_button" name= "search_button" value="Search">
+            </form>
+        </div>
     </div>
 </body>
