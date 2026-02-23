@@ -3,29 +3,33 @@ body{
 }
 
 h1{
-    font-size: 650%;
+    font-size: 600%;
     text-align: center;
-    font-family:"Barriecito", system-ui;
+    font-family:"Sigmar", system-ui;
     font-weight: 90;
     margin:3%;
     margin-bottom:1.5%;
+    color: #14213d;
 }
 
 h2{
     font-size: 400%;
     text-align: center;
     font-weight: 90;
-    margin:2%;
-    margin-bottom:-1%
+    margin-top:0%;
+    margin-bottom:-1%;
+    color: #bfd7ea;
 }
 
 h3{
-    font-size: 300%;
+    font-size: 250%;
     text-align: left;
+    font-family: "Sigmar", system-ui;
     font-weight: 90;
     margin:3%;
     margin-left:4%;
     margin-bottom:-1%;
+    color: #14213d;
 }
 
 h4{
@@ -53,7 +57,6 @@ a:link{
 }
 
 a:hover{
-    color:#640b42;
     font-size:150%;
     text-decoration: none;
 }
@@ -62,6 +65,33 @@ a:visited{
     color:rgb(255, 251, 245);
     font-size: 150%;
     text-decoration: none;
+}
+
+label{
+    font-size:120%;
+    font-family: Sigmar;
+    color:#14213d
+}
+
+ul{
+    list-style: none;
+    min-width: 60vw;
+    margin-left:3%;
+    margin-top:0%;
+    margin-bottom:0%;
+    padding:0%;
+    overflow: hidden;
+    text-align: center;
+}
+
+li{
+    font-family: monospace;
+    float:left;
+    padding:1.5%;
+    padding-left:6%;
+    padding-right:6%;
+    display: list-item;
+    unicode-bidi: isolate;
 }
 
 .links_bar{
@@ -74,7 +104,7 @@ a:visited{
     border-right: 2px solid #46464617;
     border-left: 2px solid #46464617;
     border-radius: 6px;
-    background: rgb(3, 10, 68);
+    background: #087e8b;
     align-items: center;
     text-align: center;
 }
@@ -84,16 +114,19 @@ a:visited{
     gap: 20px;
     padding: 30px;
     border-radius: 26px;
-    background: rgb(3, 10, 68)
+    background: #0b3954;
+    max-width: 274px;
+    min-width:274px;
 }
 
 .grid{
     display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/2, max(260px, 100%/5)), 1fr));
     gap:60px;
-    grid-template-columns: repeat(4, 1fr);
-    margin-left:180px;
-    margin-right:180px;
+    margin-left:10vw;
+    margin-right:10vw;
     margin-top: 70px;
+    max-width:80vw;
 }
 
 .button{
@@ -103,6 +136,24 @@ a:visited{
     padding-left:8px;
     margin-top: 10px;
     border-radius:12px;
-    background:rgb(59, 121, 255);
+    background:#fca311;
     float:right;
+}
+
+#search{
+    border-radius: 6px;
+    font-size:110%;
+    height:30px; 
+    width:250px;
+}
+
+#search_button{
+    font-size: 110%;
+    font-family: monospace;
+    font-weight:bolder;
+    border:#d88601;
+    border-radius: 6px;
+    background-color: #fca311;
+    height:36px; 
+    width:65px;
 }
