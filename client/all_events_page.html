@@ -34,9 +34,15 @@
         <!--Filters-->
         <button onclick="displayMenu('categories')" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
         <div id="categories" class = "categories_list">
-            <button href="#">Event Type</a>
+            <button onclick="displayMenu('types')" href="#">Event Type</a>
             <button onclick="displayMenu('locations')" href="#">Location</a>
             <button href="#">Date/Time</a>
+        </div>
+        <div id="types" class = "filters_list">
+            <button onclick="displayMenu('types')" href="#">&larr; Back</button>
+            <button href="#">Type 1</button>
+            <button href="#">Type 2</button>
+            <button href="#">Type 3</button>
         </div>
         <div id="locations" class = "filters_list">
             <button onclick="displayMenu('locations')" href="#">&larr; Back</a>
