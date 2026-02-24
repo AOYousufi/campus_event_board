@@ -8,37 +8,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&family=Modak&family=Protest+Guerrilla&family=Sigmar&display=swap" rel="stylesheet">
  
     <link rel="stylesheet" href = "style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Campus Events</h1>
+    <!--title-->
+    <div style = "text-align: center; align-items: center;margin:2.5%; margin-bottom: 1.5%;">
+    <a class = "title" href="landing_page.html" alt = "Campus Events">Campus Events</a>
+    </div>
+
     <!--links bar-->
     <section class = "links_bar">
-        <div style = "margin-bottom: -0.5%;display: flex;">
+        <div style = "margin-bottom: -0%;display: flex;">
             <ul>
-                <li><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
-                <li><a href="test.html" alt="Society Events">Society Events</a></li>
+                <li class = "active"><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
+                <li><a href="society_events_page.html" alt="Society Events">Society Events</a></li>
                 <li><a href = "test.html">SU Events</a></li>
                 <li><a href="test.html">University Events</a></li>
             </ul>
         </div>
     </section>
 
-    <h3 style = "font-size: 350%;margin-top:2%;margin-left:5%">All Events</h3>
+    <h3 style = "font-size: 350%;margin-top:2%;margin-left:5%;">All Events</h3>
 
-    <!--search bar-->
-    <div style = "float:inline-end;margin-right:4%; margin-top:-2%;">
-        <form>
-            <label for="search">Search Events: </label>
-            <input type="text" id="search" name="search">
-            <input type="button" id="search_button" name= "search_button" value="Search">
-        </form>
+    <div style = "float:inline-end;margin-right:4%; margin-top:-2.5%;">
+        <!--Filters-->
+        <button onclick="displayMenu('categories')" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
+        <div id="categories" class = "categories_list">
+            <button onclick="displayMenu('types')" href="#">Event Type</a>
+            <button onclick="displayMenu('locations')" href="#">Location</a>
+            <button href="#">Date/Time</a>
+        </div>
+        <div id="types" class = "filters_list">
+            <button onclick="displayMenu('types')" href="#">&larr; Back</button>
+            <button href="#">Type 1</button>
+            <button href="#">Type 2</button>
+            <button href="#">Type 3</button>
+        </div>
+        <div id="locations" class = "filters_list">
+            <button onclick="displayMenu('locations')" href="#">&larr; Back</a>
+            <button href="#">Stoke-on-Trent</a>
+            <button href="#">London</a>
+            <button href="#">Stafford</a>
+        </div>
+
+        <!--search bar-->
+        <div style = "float:inline-end;margin-top:0.8%">
+            <form>
+                <label for="search">Search Events: </label>
+                <input type="text" id="search" name="search">
+                <input type="button" id="search_button" name= "search_button" value="Search">
+            </form>
+        </div>
     </div>
+    
 
     <!--grid of events-->
     <section class = "grid">
         <article class = "event_panel">
             <div>
-                <img src = "blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Test Event</h4>
                 <p>Example event summary</p>
                 <a class = "button" href = "test.html">Learn More ></a>
@@ -46,25 +74,25 @@
         </article>
         <article class = "event_panel">
             <div>
-                <img src = "blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 2</h4>
             </div>
         </article>
         <article class = "event_panel">
             <div>
-                <img src = "blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 3</h4>
             </div>
         </article>
         <article class = "event_panel">
             <div>
-                <img src = "blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 4</h4>
             </div>
         </article>
         <article class = "event_panel">
             <div>
-                <img src = "blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 5</h4>
             </div>
         </article>
