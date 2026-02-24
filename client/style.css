@@ -226,7 +226,7 @@ button p{
     min-width: 10vw;
 }
 
-.filters_list button{
+.filters_list_button{
     display: block;
     font-family: monospace;
     text-align:left;
@@ -243,8 +243,18 @@ button p{
     cursor:pointer;
 }
 
-.filters_list button:hover{
+.filters_list_button:hover{
     background-color: rgb(238, 238, 238);
+}
+
+.filters_list_button:focus{
+    background-color: #fca311;
+    color:#14213d;
+}
+
+.active_button{
+    background-color: #fca311;
+    color:#14213d;
 }
 
 .show{
