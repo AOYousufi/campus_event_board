@@ -1,3 +1,7 @@
+var locationFilter = '';
+var typesFilter = '';
+var filters= [];
+
 function displayMenu(v){
     document.getElementById(v).classList.toggle('show');
 }
@@ -24,14 +28,61 @@ window.onclick = function(event) {
   }
 }
 
-function filterEvents(c) {
-  var x, i;
-  x = document.getElementsByClassName('event_panel');
-  if (c == 'all') c = '';
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    hideEvent(x[i], 'hide_event');
-    if (x[i].className.indexOf(c) > -1) showEvent(x[i], 'hide_event');
+function updateLocationFilter(location){
+  if (location == 'clear'){
+    location = '';
+  }
+
+  locationFilter = location;
+  filters[0] = location;
+  filters[1] = typesFilter;
+  console.log(filters[0]);
+  console.log(filters);
+
+  filterEvents();
+}
+
+function updateTypeFilter(type){
+  if (type == 'clear'){
+    type = '';
+  }
+
+  typesFilter = type;
+  filters[1] = type;
+  filters[0] = locationFilter;
+  console.log(filters[1]);
+  console.log(filters);
+
+  filterEvents();
+}
+
+function clearAllFilters(){
+  typesFilter = '';
+  locationFilter = '';
+  filters[0] = '';
+  filters[1] = '';
+
+  filterEvents();
+}
+
+function filterEvents(){
+  var events, i, j;
+  events = document.getElementsByClassName('event_panel');
+
+  for(i = 0; i < events.length; i++){
+    var show_event = true;
+    hideEvent(events[i], 'hide_event');
+    for(j = 0; j < filters.length; j++){
+      if (events[i].className.indexOf(filters[j]) <= -1){
+        //showEvent(events[i], 'hide_event');
+        show_event = false;
+        break;
+      }
+    }
+
+    if(show_event == true){
+      showEvent(events[i], 'hide_event')
+    }
   }
 }
 
