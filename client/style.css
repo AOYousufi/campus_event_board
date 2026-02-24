@@ -129,8 +129,8 @@ button p{
 
 .event_panel{
     display:flex;
+    flex-wrap:wrap;
     font-family: monospace;
-    gap: 20px;
     padding: 30px;
     border-radius: 26px;
     background: #0b3954;
@@ -141,7 +141,7 @@ button p{
 .grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%/2, max(260px, 100%/5)), 1fr));
-    gap:60px;
+    gap:5vw;
     margin-left:10vw;
     margin-right:10vw;
     margin-top: 70px;
@@ -204,6 +204,7 @@ button p{
     background-color: rgb(247, 247, 247);
     min-width:10vw;
     max-width:10vw;
+    cursor:pointer;
 }
 
 .categories_list button:hover{
@@ -239,6 +240,7 @@ button p{
     background-color: rgb(247, 247, 247);
     min-width:10vw;
     max-width:10vw;
+    cursor:pointer;
 }
 
 .filters_list button:hover{
@@ -247,6 +249,10 @@ button p{
 
 .show{
     display:block;
+}
+
+.hide_event{
+    display:none;
 }
 
 #search{

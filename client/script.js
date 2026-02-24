@@ -1,5 +1,5 @@
-function displayMenu(c){
-    document.getElementById(c).classList.toggle('show');
+function displayMenu(v){
+    document.getElementById(v).classList.toggle('show');
 }
 
 window.onclick = function(event) {
@@ -23,3 +23,40 @@ window.onclick = function(event) {
     }
   }
 }
+
+function filterEvents(c) {
+  var x, i;
+  x = document.getElementsByClassName('event_panel');
+  if (c == 'all') c = '';
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    hideEvent(x[i], 'hide_event');
+    if (x[i].className.indexOf(c) > -1) showEvent(x[i], 'hide_event');
+  }
+}
+
+// Show filtered elements
+function showEvent(event, eventTag) {
+  var i, eventArr, tagArr;
+  eventArr = event.className.split(' ');
+  tagArr = eventTag.split(' ');
+  for (i = 0; i < tagArr.length; i++) {
+    while (eventArr.indexOf(tagArr[i]) > -1) {
+      eventArr.splice(eventArr.indexOf(tagArr[i]), 1);
+    }
+  }
+  event.className = eventArr.join(' ');
+}
+
+// Hide elements that are not selected
+function hideEvent(event, eventTag) {
+  var i, eventArr, tagArr;
+  eventArr = event.className.split(' ');
+  tagArr = eventTag.split(' ');
+  for (i = 0; i < tagArr.length; i++) {
+    if (eventArr.indexOf(tagArr[i]) == -1) {
+      event.className += ' ' + tagArr[i];
+    }
+  }
+}
+

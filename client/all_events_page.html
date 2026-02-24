@@ -18,7 +18,7 @@
 
     <!--links bar-->
     <section class = "links_bar">
-        <div style = "margin-bottom: -0%;display: flex;">
+        <div style = "margin-bottom: -0.05%;display: flex;">
             <ul>
                 <li class = "active"><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
                 <li><a href="society_events_page.html" alt="Society Events">Society Events</a></li>
@@ -34,21 +34,23 @@
         <!--Filters-->
         <button onclick="displayMenu('categories')" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
         <div id="categories" class = "categories_list">
-            <button onclick="displayMenu('types')" href="#">Event Type</a>
-            <button onclick="displayMenu('locations')" href="#">Location</a>
-            <button href="#">Date/Time</a>
+            <button onclick="displayMenu('types')" href="#">Event Type</button>
+            <button onclick="displayMenu('locations')" href="#">Location</button>
+            <button href="#">Date/Time</button>
+            <button onclick="filterEvents('all')" href="#">Clear All Filters</button>
         </div>
         <div id="types" class = "filters_list">
             <button onclick="displayMenu('types')" href="#">&larr; Back</button>
-            <button href="#">Type 1</button>
-            <button href="#">Type 2</button>
-            <button href="#">Type 3</button>
+            <button onclick="filterEvents('society')" href="#">Society</button>
+            <button onclick="filterEvents('su')" href="#">Students' Union</button>
+            <button onclick="filterEvents('university')" href="#">University</button>
         </div>
         <div id="locations" class = "filters_list">
-            <button onclick="displayMenu('locations')" href="#">&larr; Back</a>
-            <button href="#">Stoke-on-Trent</a>
-            <button href="#">London</a>
-            <button href="#">Stafford</a>
+            <button onclick="displayMenu('locations')" href="#">&larr; Back</button>
+            <button onclick="filterEvents('stoke')" href="#">Stoke-on-Trent</button>
+            <button onclick="filterEvents('london')" href="#">London</button>
+            <button onclick="filterEvents('stafford')" href="#">Stafford</button>
+            <button onclick="filterEvents('all')" href="#">Clear Filters</button>
         </div>
 
         <!--search bar-->
@@ -64,7 +66,7 @@
 
     <!--grid of events-->
     <section class = "grid">
-        <article class = "event_panel">
+        <article class = "event_panel stoke society">
             <div>
                 <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Test Event</h4>
@@ -72,25 +74,25 @@
                 <a class = "button" href = "test.html">Learn More ></a>
             </div>
         </article>
-        <article class = "event_panel">
+        <article class = "event_panel stoke">
             <div>
                 <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 2</h4>
             </div>
         </article>
-        <article class = "event_panel">
+        <article class = "event_panel london">
             <div>
                 <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 3</h4>
             </div>
         </article>
-        <article class = "event_panel">
+        <article class = "event_panel london society">
             <div>
                 <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 4</h4>
             </div>
         </article>
-        <article class = "event_panel">
+        <article class = "event_panel stoke">
             <div>
                 <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
                 <h4>Event 5</h4>
