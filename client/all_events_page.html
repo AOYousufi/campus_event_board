@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&family=Modak&family=Protest+Guerrilla&family=Sigmar&display=swap" rel="stylesheet">
  
     <link rel="stylesheet" href = "style.css">
-    <script src = "script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!--title-->
@@ -32,11 +32,17 @@
 
     <div style = "float:inline-end;margin-right:4%; margin-top:-2.5%;">
         <!--Filters-->
-        <button onclick="displayFilters()" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
-        <div id="filters" class = "filters_list">
-            <a href="#">Filter 1</a>
-            <a href="#">Filter 2</a>
-            <a href="#">Filter 3</a>
+        <button onclick="displayMenu('categories')" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
+        <div id="categories" class = "categories_list">
+            <button href="#">Event Type</a>
+            <button onclick="displayMenu('locations')" href="#">Location</a>
+            <button href="#">Date/Time</a>
+        </div>
+        <div id="locations" class = "filters_list">
+            <button onclick="displayMenu('locations')" href="#">&larr; Back</a>
+            <button href="#">Stoke-on-Trent</a>
+            <button href="#">London</a>
+            <button href="#">Stafford</a>
         </div>
 
         <!--search bar-->

@@ -32,11 +32,23 @@
 
     <div style = "float:inline-end;margin-right:4%; margin-top:-2.5%;">
         <!--Filters-->
-        <button onclick="displayFilters()" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
-        <div id="filters" class = "filters_list">
-            <a href="#">Filter 1</a>
-            <a href="#">Filter 2</a>
-            <a href="#">Filter 3</a>
+        <button onclick="displayMenu('categories')" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
+        <div id="categories" class = "categories_list">
+            <button onclick="displayMenu('societies')">Society</button>
+            <button onclick="displayMenu('locations')">Location</button>
+            <button onclick="displaySocieties()">Date/Time</button>
+        </div>
+        <div id="societies" class = "filters_list">
+            <button onclick="displayMenu('societies')" href="#">&larr; Back</a>
+            <button href="#">Society 1</a>
+            <button href="#">Society 2</a>
+            <button href="#">Society 3</a>
+        </div>
+        <div id="locations" class = "filters_list">
+            <button onclick="displayMenu('locations')" href="#">&larr; Back</a>
+            <button href="#">Stoke-on-Trent</a>
+            <button href="#">London</a>
+            <button href="#">Stafford</a>
         </div>
 
         <!--search bar-->

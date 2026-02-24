@@ -181,24 +181,32 @@ button p{
     border-radius: 6px;
 }
 
-.filters_list{
+.categories_list{
     display: none;
     position:absolute;
     z-index: 1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color:rgb(247, 247, 247)
+    background-color:rgb(247, 247, 247);
+    min-width: 10vw;
 }
 
-.filters_list a{
+.categories_list button{
     display: block;
+    font-family: monospace;
+    text-align:left;
+    font-size: 140%;
     color:#14213d;
-    padding:1%;
-    padding-left:2%;
-    padding-right:2%;
+    padding:8%;
+    padding-left:5%;
+    padding-right:5%;
     text-decoration: none;
+    border:0;
+    background-color: rgb(247, 247, 247);
+    min-width:10vw;
+    max-width:10vw;
 }
 
-.filters_list a:hover{
+.categories_list button:hover{
     background-color: rgb(238, 238, 238);
 }
 
@@ -206,6 +214,39 @@ button p{
     float:left;
     width:30px;
     height:30px;
+}
+
+.filters_list{
+    display: none;
+    position:absolute;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color:rgb(247, 247, 247);
+    min-width: 10vw;
+}
+
+.filters_list button{
+    display: block;
+    font-family: monospace;
+    text-align:left;
+    font-size: 140%;
+    color:#14213d;
+    padding:8%;
+    padding-left:5%;
+    padding-right:5%;
+    text-decoration: none;
+    border:0;
+    background-color: rgb(247, 247, 247);
+    min-width:10vw;
+    max-width:10vw;
+}
+
+.filters_list button:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+.show{
+    display:block;
 }
 
 #search{
