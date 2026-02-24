@@ -37,7 +37,7 @@
             <button onclick="displayMenu('societies')">Society</button>
             <button onclick="displayMenu('locations')">Location</button>
             <button onclick="displaySocieties()">Date/Time</button>
-            <button onclick="filterEvents('all')" href="#">Clear All Filters</button>
+            <button onclick="clearAllFilters()" href="#">Clear All Filters</button>
         </div>
         <div id="societies" class = "filters_list">
             <button onclick="displayMenu('societies')" href="#">&larr; Back</button>
@@ -47,9 +47,9 @@
         </div>
         <div id="locations" class = "filters_list">
             <button onclick="displayMenu('locations')" href="#">&larr; Back</button>
-            <button onclick="filterEvents('stoke')" href="#">Stoke-on-Trent</button>
-            <button onclick="filterEvents('london')" href="#">London</button>
-            <button onclick="filterEvents('stafford')" href="#">Stafford</button>
+            <button onclick="updateLocationFilter('stoke')" href="#">Stoke-on-Trent</button>
+            <button onclick="updateLocationFilter('london')" href="#">London</button>
+            <button onclick="updateLocationFilter('stafford')" href="#">Stafford</button>
         </div>
 
         <!--search bar-->
