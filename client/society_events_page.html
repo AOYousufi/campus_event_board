@@ -37,18 +37,19 @@
             <button onclick="displayMenu('societies')">Society</button>
             <button onclick="displayMenu('locations')">Location</button>
             <button onclick="displaySocieties()">Date/Time</button>
+            <button onclick="clearAllFilters()" href="#">Clear All Filters</button>
         </div>
         <div id="societies" class = "filters_list">
-            <button onclick="displayMenu('societies')" href="#">&larr; Back</a>
-            <button href="#">Society 1</a>
-            <button href="#">Society 2</a>
-            <button href="#">Society 3</a>
+            <button onclick="displayMenu('societies')" href="#">&larr; Back</button>
+            <button href="#">Society 1</button>
+            <button href="#">Society 2</button>
+            <button href="#">Society 3</button>
         </div>
         <div id="locations" class = "filters_list">
-            <button onclick="displayMenu('locations')" href="#">&larr; Back</a>
-            <button href="#">Stoke-on-Trent</a>
-            <button href="#">London</a>
-            <button href="#">Stafford</a>
+            <button onclick="displayMenu('locations')" href="#">&larr; Back</button>
+            <button onclick="updateLocationFilter('stoke')" href="#">Stoke-on-Trent</button>
+            <button onclick="updateLocationFilter('london')" href="#">London</button>
+            <button onclick="updateLocationFilter('stafford')" href="#">Stafford</button>
         </div>
 
         <!--search bar-->
