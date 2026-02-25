@@ -22,7 +22,7 @@
             <ul>
                 <li class = "active"><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
                 <li><a href="society_events_page.html" alt="Society Events">Society Events</a></li>
-                <li><a href = "test.html">SU Events</a></li>
+                <li><a href = "student_union_events_page.html">SU Events</a></li>
                 <li><a href="test.html">University Events</a></li>
             </ul>
         </div>
@@ -36,22 +36,53 @@
         <div id="categories" class = "categories_list">
             <button onclick="displayMenu('types')" href="#">Event Type</button>
             <button onclick="displayMenu('locations')" href="#">Location</button>
-            <button href="#">Date/Time</button>
+            <button onclick="displayMenu('date_categories')" href="#">Date/Time</button>
             <button onclick="clearAllFilters()" href="#">Clear All Filters</button>
         </div>
         <div id="types" class = "filters_list">
             <button onclick="displayMenu('types')" href="#">&larr; Back</button>
-            <button onclick="updateTypeFilter('society')" href="#" id="type">Society</button>
-            <button onclick="updateTypeFilter('su')" href="#" id="type">Students' Union</button>
-            <button onclick="updateTypeFilter('university')" href="#" id="type">University</button>
-            <button onclick="updateTypeFilter('clear')" href="#" id="type">Clear Filters</button>
+            <button onclick="updateTypeFilter('society')" href="#" id="society">Society</button>
+            <button onclick="updateTypeFilter('su')" href="#" id="su">Students' Union</button>
+            <button onclick="updateTypeFilter('university')" href="#" id="university">University</button>
+            <button onclick="updateTypeFilter('clear')" href="#">Clear Filter</button>
         </div>
         <div id="locations" class = "filters_list">
             <button onclick="displayMenu('locations')" href="#">&larr; Back</button>
-            <button onclick="updateLocationFilter('stoke')" href="#" id="location">Stoke-on-Trent</button>
-            <button onclick="updateLocationFilter('london')" href="#" id="location">London</button>
-            <button onclick="updateLocationFilter('stafford')" href="#" id="location">Stafford</button>
-            <button onclick="updateLocationFilter('clear')" href="#" id="location">Clear Filters</button>
+            <button onclick="updateLocationFilter('stoke')" href="#" id="stoke">Stoke-on-Trent</button>
+            <button onclick="updateLocationFilter('london')" href="#" id="london">London</button>
+            <button onclick="updateLocationFilter('stafford')" href="#" id="stafford">Stafford</button>
+            <button onclick="updateLocationFilter('clear')" href="#">Clear Filter</button>
+        </div>
+        <div id="date_categories" class = "categories_list">
+            <button onclick="displayMenu('date_categories')" href="#">&larr; Back</button>
+            <button onclick="displayMenu('months')" href="#">Month</button>
+            <button onclick="displayMenu('days')" href="#">Day</button>
+            <button href="#">Time</button>
+        </div>
+        <div id="months" class="filters_list">
+            <button onclick="displayMenu('months')" href="#">&larr; Back</button>
+            <button onclick="updateMonthFilter('jan')" href="#">January</button>
+            <button onclick="updateMonthFilter('feb')" href="#">February</button>
+            <button onclick="updateMonthFilter('mar')" href="#">March</button>
+            <button onclick="updateMonthFilter('apr')" href="#">April</button>
+            <button onclick="updateMonthFilter('may')" href="#">May</button>
+            <button onclick="updateMonthFilter('jun')" href="#">June</button>
+            <button onclick="updateMonthFilter('jul')" href="#">July</button>
+            <button onclick="updateMonthFilter('aug')" href="#">August</button>
+            <button onclick="updateMonthFilter('sept')" href="#">September</button>
+            <button onclick="updateMonthFilter('oct')" href="#">October</button>
+            <button onclick="updateMonthFilter('nov')" href="#">November</button>
+            <button onclick="updateMonthFilter('dec')" href="#">Decemeber</button>
+        </div>
+        <div id="days" class="filters_list">
+            <button onclick="displayMenu('days')" href="#">&larr; Back</button>
+            <button onclick="updateDayFilter('mon')" href="#">Monday</button>
+            <button onclick="updateDayFilter('tue')" href="#">Tuesday</button>
+            <button onclick="updateDayFilter('wed')" href="#">Wednesday</button>
+            <button onclick="updateDayFilter('thur')" href="#">Thursday</button>
+            <button onclick="updateDayFilter('fri')" href="#">Friday</button>
+            <button onclick="updateDayFilter('sat')" href="#">Saturday</button>
+            <button onclick="updateDayFilter('sun')" href="#">Sunday</button>
         </div>
 
         <!--search bar-->
