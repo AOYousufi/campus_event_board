@@ -13,7 +13,7 @@
 <body>
     <!--title-->
     <div style = "text-align: center; align-items: center;margin:2.5%; margin-bottom: 1.5%;">
-    <a class = "title" href="landing_page.html" alt = "Campus Events">Campus Events</a>
+        <a class = "title" href="index.html" alt = "Campus Events">Campus Events</a>
     </div>
 
     <!--links bar-->
@@ -22,8 +22,8 @@
             <ul>
                 <li><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
                 <li class = "active"><a href="society_events_page.html" alt="Society Events">Society Events</a></li>
-                <li><a href = "test.html">SU Events</a></li>
-                <li><a href="test.html">University Events</a></li>
+                <li><a href = "student_union_events_page.html">SU Events</a></li>
+                <li><a href="university_events_page.html">University Events</a></li>
             </ul>
         </div>
     </section>
@@ -36,20 +36,56 @@
         <div id="categories" class = "categories_list">
             <button onclick="displayMenu('societies')">Society</button>
             <button onclick="displayMenu('locations')">Location</button>
-            <button onclick="displaySocieties()">Date/Time</button>
+            <button onclick="displayMenu('date_categories')">Date/Time</button>
             <button onclick="clearAllFilters()" href="#">Clear All Filters</button>
         </div>
         <div id="societies" class = "filters_list">
             <button onclick="displayMenu('societies')" href="#">&larr; Back</button>
-            <button href="#">Society 1</button>
+            <button onclick="updateSocietyFilter('computing_society')" href="#">Computing Society</button>
             <button href="#">Society 2</button>
             <button href="#">Society 3</button>
+            <button href="#">Society 4</button>
+            <button onclick="updateSocietyFilter('clear')" href="#">Clear Filter</button>
         </div>
         <div id="locations" class = "filters_list">
             <button onclick="displayMenu('locations')" href="#">&larr; Back</button>
             <button onclick="updateLocationFilter('stoke')" href="#">Stoke-on-Trent</button>
             <button onclick="updateLocationFilter('london')" href="#">London</button>
             <button onclick="updateLocationFilter('stafford')" href="#">Stafford</button>
+            <button onclick="updateLocationFilter('clear')" href="#">Clear Filter</button>
+        </div>
+        <div id="date_categories" class = "categories_list">
+            <button onclick="displayMenu('date_categories')" href="#">&larr; Back</button>
+            <button onclick="displayMenu('months')" href="#">Month</button>
+            <button onclick="displayMenu('days')" href="#">Day</button>
+            <button href="#">Time</button>
+        </div>
+        <div id="months" class="filters_list">
+            <button onclick="displayMenu('months')" href="#">&larr; Back</button>
+            <button onclick="updateMonthFilter('jan')" href="#">January</button>
+            <button onclick="updateMonthFilter('feb')" href="#">February</button>
+            <button onclick="updateMonthFilter('mar')" href="#">March</button>
+            <button onclick="updateMonthFilter('apr')" href="#">April</button>
+            <button onclick="updateMonthFilter('may')" href="#">May</button>
+            <button onclick="updateMonthFilter('jun')" href="#">June</button>
+            <button onclick="updateMonthFilter('jul')" href="#">July</button>
+            <button onclick="updateMonthFilter('aug')" href="#">August</button>
+            <button onclick="updateMonthFilter('sept')" href="#">September</button>
+            <button onclick="updateMonthFilter('oct')" href="#">October</button>
+            <button onclick="updateMonthFilter('nov')" href="#">November</button>
+            <button onclick="updateMonthFilter('dec')" href="#">Decemeber</button>
+            <button onclick="updateMonthFilter('clear')" href="#">Clear Filter</button>
+        </div>
+        <div id="days" class="filters_list">
+            <button onclick="displayMenu('days')" href="#">&larr; Back</button>
+            <button onclick="updateDayFilter('mon')" href="#">Monday</button>
+            <button onclick="updateDayFilter('tue')" href="#">Tuesday</button>
+            <button onclick="updateDayFilter('wed')" href="#">Wednesday</button>
+            <button onclick="updateDayFilter('thur')" href="#">Thursday</button>
+            <button onclick="updateDayFilter('fri')" href="#">Friday</button>
+            <button onclick="updateDayFilter('sat')" href="#">Saturday</button>
+            <button onclick="updateDayFilter('sun')" href="#">Sunday</button>
+            <button onclick="updateDayFilter('clear')" href="#">Clear Filter</button>
         </div>
 
         <!--search bar-->
@@ -61,4 +97,40 @@
             </form>
         </div>
     </div>
+
+    <!--grid of events-->
+    <section class = "grid">
+        <article class = "event_panel stoke society computing_society wed feb">
+            <div>
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <h4>Test Event</h4>
+                <p>Example event summary</p>
+                <a class = "button" href = "test.html">Learn More ></a>
+            </div>
+        </article>
+        <article class = "event_panel stoke society gds wed">
+            <div>
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <h4>Event 2</h4>
+            </div>
+        </article>
+        <article class = "event_panel london tue">
+            <div>
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <h4>Event 3</h4>
+            </div>
+        </article>
+        <article class = "event_panel london society">
+            <div>
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <h4>Event 4</h4>
+            </div>
+        </article>
+        <article class = "event_panel stoke">
+            <div>
+                <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
+                <h4>Event 5</h4>
+            </div>
+        </article>
+    </section>
 </body>

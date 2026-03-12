@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>Campus Events Board - University Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--embed for fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Barrio&family=Modak&family=Protest+Guerrilla&family=Sigmar&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href = "style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--title-->
+    <div style = "text-align: center; align-items: center;margin:2.5%; margin-bottom: 1.5%;">
+    <a class = "title" href="index.html" alt = "Campus Events">Campus Events</a>
+    </div>
+
+    <!--links bar-->
+    <section class = "links_bar">
+        <div style = "margin-bottom: -0.05%;display: flex;">
+            <ul>
+                <li><a href = "all_events_page.html" alt = "All Events">All Events</a></li>
+                <li><a href="society_events_page.html" alt="Society Events">Society Events</a></li>
+                <li><a href = "student_union_events_page.html">SU Events</a></li>
+                <li class = "active"><a href="university_events_page.html">University Events</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <h3 style = "font-size: 350%;margin-top:2%;margin-left:5%;">University Events</h3>
+
+    <div style = "float:inline-end;margin-right:4%; margin-top:-2.5%;">
+        <!--Filters-->
+        <button onclick="displayMenu('categories')" class = "filter_button" style = "float:inline-start; margin-left:-6%"><img class = "icon" src = "images/filter2.png"><p>Filters</p></button>
+        <div id="categories" class = "categories_list">
+            <button onclick="displayMenu('locations')" href="#">Location</button>
+            <button onclick="displayMenu('date_categories')" href="#">Date/Time</button>
+            <button onclick="clearAllFilters()" href="#">Clear All Filters</button>
+        </div>
+        <div id="locations" class = "filters_list">
+            <button onclick="displayMenu('locations')" href="#">&larr; Back</button>
+            <button onclick="updateLocationFilter('stoke')" href="#" id="stoke">Stoke-on-Trent</button>
+            <button onclick="updateLocationFilter('london')" href="#" id="london">London</button>
+            <button onclick="updateLocationFilter('stafford')" href="#" id="stafford">Stafford</button>
+            <button onclick="updateLocationFilter('clear')" href="#">Clear Filter</button>
+        </div>
+        <div id="date_categories" class = "categories_list">
+            <button onclick="displayMenu('date_categories')" href="#">&larr; Back</button>
+            <button onclick="displayMenu('months')" href="#">Month</button>
+            <button onclick="displayMenu('days')" href="#">Day</button>
+            <button href="#">Time</button>
+        </div>
+        <div id="months" class="filters_list">
+            <button onclick="displayMenu('months')" href="#">&larr; Back</button>
+            <button onclick="updateMonthFilter('jan')" href="#">January</button>
+            <button onclick="updateMonthFilter('feb')" href="#">February</button>
+            <button onclick="updateMonthFilter('mar')" href="#">March</button>
+            <button onclick="updateMonthFilter('apr')" href="#">April</button>
+            <button onclick="updateMonthFilter('may')" href="#">May</button>
+            <button onclick="updateMonthFilter('jun')" href="#">June</button>
+            <button onclick="updateMonthFilter('jul')" href="#">July</button>
+            <button onclick="updateMonthFilter('aug')" href="#">August</button>
+            <button onclick="updateMonthFilter('sept')" href="#">September</button>
+            <button onclick="updateMonthFilter('oct')" href="#">October</button>
+            <button onclick="updateMonthFilter('nov')" href="#">November</button>
+            <button onclick="updateMonthFilter('dec')" href="#">Decemeber</button>
+            <button onclick="updateMonthFilter('clear')" href="#">Clear Filter</button>
+        </div>
+        <div id="days" class="filters_list">
+            <button onclick="displayMenu('days')" href="#">&larr; Back</button>
+            <button onclick="updateDayFilter('mon')" href="#">Monday</button>
+            <button onclick="updateDayFilter('tue')" href="#">Tuesday</button>
+            <button onclick="updateDayFilter('wed')" href="#">Wednesday</button>
+            <button onclick="updateDayFilter('thur')" href="#">Thursday</button>
+            <button onclick="updateDayFilter('fri')" href="#">Friday</button>
+            <button onclick="updateDayFilter('sat')" href="#">Saturday</button>
+            <button onclick="updateDayFilter('sun')" href="#">Sunday</button>
+            <button onclick="updateDayFilter('clear')" href="#">Clear Filter</button>
+        </div>
+
+        <!--search bar-->
+        <div style = "float:inline-end;margin-top:0.8%">
+            <form>
+                <label for="search">Search Events: </label>
+                <input type="text" id="search" name="search">
+                <input type="button" id="search_button" name= "search_button" value="Search">
+            </form>
+        </div>
+    </div>
+</body>

@@ -1,5 +1,8 @@
 var locationFilter = '';
 var typesFilter = '';
+var societyFilter = '';
+var monthFilter = '';
+var dateFilter = '';
 var filters= [];
 
 function displayMenu(v){
@@ -36,8 +39,9 @@ function updateLocationFilter(location){
   locationFilter = location;
   filters[0] = location;
   filters[1] = typesFilter;
-  console.log(filters[0]);
-  console.log(filters);
+  filters[2] = societyFilter;
+  filters[3] = monthFilter;
+  filters[4] = dateFilter;
 
   filterEvents();
 }
@@ -48,9 +52,59 @@ function updateTypeFilter(type){
   }
 
   typesFilter = type;
-  filters[1] = type;
   filters[0] = locationFilter;
-  console.log(filters[1]);
+  filters[1] = type;
+  filters[2] = societyFilter;
+  filters[3] = monthFilter;
+  filters[4] = dateFilter;
+
+  filterEvents();
+}
+
+function updateSocietyFilter(society){
+  if(society == 'clear'){
+    society = '';
+  }
+
+  societyFilter = society;
+  filters[0] = locationFilter;
+  filters[1] = typesFilter;
+  filters[2] = society;
+  filters[3] = monthFilter;
+  filters[4] = dateFilter;
+
+  filterEvents();
+}
+
+function updateMonthFilter(month){
+  if(month == 'clear'){
+    month = '';
+  }
+
+  monthFilter = month;
+  filters[0] = locationFilter;
+  filters[1] = typesFilter;
+  filters[2] = societyFilter;
+  filters[3] = month;
+  filters[4] = dateFilter;
+
+  console.log(filters);
+
+  filterEvents();
+}
+
+function updateDayFilter(date){
+  if(date == 'clear'){
+    date = '';
+  }
+
+  dateFilter = date;
+  filters[0] = locationFilter;
+  filters[1] = typesFilter;
+  filters[2] = societyFilter;
+  filters[3] = monthFilter;
+  filters[4] = date;
+
   console.log(filters);
 
   filterEvents();
@@ -59,9 +113,12 @@ function updateTypeFilter(type){
 function clearAllFilters(){
   typesFilter = '';
   locationFilter = '';
-  filters[0] = '';
-  filters[1] = '';
+  societyFilter = '';
 
+  for(var i = 0; i < filters.length; i++){
+    filters[i] = '';
+  }
+  
   filterEvents();
 }
 
