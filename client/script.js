@@ -167,3 +167,22 @@ function hideEvent(event, eventTag) {
     }
   }
 }
+
+function searchEvents(){
+  var input, filter, eventGrid, events, h4, i, title;
+  input = document.getElementById('search');
+  filter = input.value.toUpperCase();
+  eventGrid = document.getElementById('events_grid');
+  events = eventGrid.getElementsByTagName('article');
+
+  //Loop through events and hide the ones that don't match search
+  for (i = 0; i < events.length; i++) {
+    h4 = events[i].getElementsByTagName("h4")[0];
+    title = h4.textContent || h4.innerText;
+    if (title.toUpperCase().indexOf(filter) > -1) {
+      events[i].style.display = "";
+    } else {
+      events[i].style.display = "none";
+    }
+  }
+}

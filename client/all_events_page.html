@@ -91,7 +91,7 @@
         <div style = "float:inline-end;margin-top:0.8%">
             <form>
                 <label for="search">Search Events: </label>
-                <input type="text" id="search" name="search">
+                <input type="text" id="search" name="search" onkeyup="searchEvents()">
                 <input type="button" id="search_button" name= "search_button" value="Search">
             </form>
         </div>
@@ -99,7 +99,7 @@
     
 
     <!--grid of events-->
-    <section class = "grid">
+    <section class = "grid" id="events_grid" style="margin-bottom: 50px;">
         <article class = "event_panel stoke society">
             <div>
                 <img src = "images/blank picture.png" style = "max-width: 274px; min-width: 200px;width:400px">
