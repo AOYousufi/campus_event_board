@@ -1,4 +1,4 @@
-import createEvent from "../models/createEvent.model";
+import createEvent from "../models/createEvent.model.js";
 
 
 const postEvent = (req, res, next) => {
