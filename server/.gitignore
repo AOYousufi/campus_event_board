@@ -30,9 +30,10 @@ coverage/
 coverage-final.json
 .nyc_output/
 
-# Environment files
+# Environment files (keep credentials out of Git)
 .env
-.env.*.local
+.env.*
+!.env.example
 
 # Logs
 *.log
