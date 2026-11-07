@@ -1,24 +1,24 @@
 import pkg from "pg";
 import dotenv from "dotenv";
 
-dotenv.config({ path: ".env.production" });
+const ENV = process.env.NODE_ENV || "development";
+dotenv.config({ path: `.env.${ENV}` });
 
 const { Pool } = pkg;
-
-const ENV = process.env.NODE_ENV || "development";
-
 const config = {};
 
-if (ENV === "production") {
+if (process.env.DATABASE_URL) {
   config.connectionString = process.env.DATABASE_URL;
-  config.ssl = {
-    rejectUnauthorized: false,
-  };
-} else {
-  config.connectionString =
-    "postgresql://sultandara:password123@localhost:5432/campus_event_board";
 }
 
+if (ENV === "production") {
+  if (!process.env.DATABASE_URL) {
+    throw new Error("DATABASE_URL must be configured in production");
+  }
+  config.ssl = { rejectUnauthorized: false };
+}
+
+// In development, pg can also use PGHOST, PGUSER, PGPASSWORD and PGDATABASE.
 const db = new Pool(config);
 
 export default db;
